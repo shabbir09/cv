@@ -1,0 +1,673 @@
+/* ============================================================
+   Forge — Founder CV (DESIGN.md v1.2)
+   ink #11151C · ember #E4572E · slate #5A6472 · hairline #E4E1D8
+   paper #FAF8F3 · panel #F0EBDF · hero #0E1218
+   (Scholar — Academic CV — styles are in the section at the end.)
+   ============================================================ */
+:root {
+  --ink: #11151c;
+  --ember: #e4572e;
+  --slate: #5a6472;
+  --hairline: #e4e1d8;
+  --paper: #faf8f3;
+  --panel: #f0ebdf;
+  --hero: #0e1218;
+  --hero-slate: #9aa6b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter Variable', system-ui, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- shared components ---------- */
+.sec-title {
+  font-size: 10.5pt;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6pt;
+  margin-bottom: 6pt;
+  break-after: avoid;
+}
+.tick {
+  width: 14px;
+  height: 2px;
+  background: var(--ember);
+  flex: none;
+}
+
+.block {
+  margin-bottom: 13pt;
+}
+
+.entry {
+  margin-bottom: 11pt;
+  break-inside: avoid;
+}
+.entry:last-child {
+  margin-bottom: 0;
+}
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10pt;
+}
+.entry h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.entry-dates {
+  font-size: 9.5pt;
+  color: var(--slate);
+  white-space: nowrap;
+}
+.entry-sub {
+  font-size: 10pt;
+  color: var(--slate);
+  margin: 1pt 0 4pt;
+}
+.bullets {
+  list-style: none;
+}
+.bullets li {
+  font-size: 10.5pt;
+  line-height: 1.5;
+  padding-left: 11pt;
+  position: relative;
+  margin-bottom: 2.5pt;
+}
+.bullets li:last-child {
+  margin-bottom: 0;
+}
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 1pt;
+  top: 0.55em;
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background: var(--ember);
+}
+
+.pub-authors {
+  font-size: 10.5pt;
+  line-height: 1.5;
+  margin-top: 2pt;
+}
+.pub-authors strong {
+  font-weight: 600;
+}
+.pub-journal {
+  font-size: 10pt;
+  color: var(--slate);
+  line-height: 1.5;
+}
+.pub-journal a {
+  color: var(--ember);
+  text-decoration: none;
+}
+
+/* rail */
+.rail-text {
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+.skill {
+  font-size: 10.5pt;
+  line-height: 1.5;
+  margin-bottom: 3pt;
+}
+.skill:last-child {
+  margin-bottom: 0;
+}
+.skill strong {
+  font-weight: 600;
+}
+.edu-inst {
+  font-size: 10.5pt;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.edu-line {
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+.edu-dates {
+  font-size: 9.5pt;
+  color: var(--slate);
+  line-height: 1.45;
+  margin-bottom: 2pt;
+}
+.edu-hl {
+  font-size: 10pt;
+  line-height: 1.45;
+}
+.links-block {
+  break-inside: avoid;
+}
+.seg-hair {
+  width: 32px;
+  height: 2px;
+  background: var(--hairline);
+  margin-bottom: 3pt;
+}
+.qr {
+  width: 12mm;
+  height: 12mm;
+  display: block;
+  margin-bottom: 4pt;
+}
+.rail-link {
+  display: block;
+  font-size: 9.5pt;
+  line-height: 1.5;
+  color: var(--ember);
+  text-decoration: none;
+}
+
+.contact span {
+  display: block;
+}
+
+/* ---------- print render ---------- */
+@page {
+  size: A4;
+  margin: 17mm;
+}
+
+body.print-body {
+  background: #fff;
+}
+
+.print-root {
+  font-family: 'Inter Variable', sans-serif;
+  color: var(--ink);
+}
+
+.sheet {
+  width: 176mm;
+  height: 262.5mm;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  page-break-after: always;
+  break-after: page;
+}
+.sheet:last-child {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+.p-header {
+  display: grid;
+  grid-template-columns: 112mm 56mm;
+  column-gap: 8mm;
+}
+.eyebrow {
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 6pt;
+}
+.p-name {
+  font-family: 'Space Grotesk Variable', sans-serif;
+  font-weight: 700;
+  font-size: 40pt;
+  letter-spacing: -0.01em;
+  line-height: 1.04;
+}
+.seg-ember {
+  width: 40px;
+  height: 3px;
+  background: var(--ember);
+  margin-top: 6pt;
+}
+.p-header-side {
+  padding-top: 15pt;
+}
+.p-header .contact {
+  font-size: 9pt;
+  color: var(--slate);
+  line-height: 1.75;
+}
+
+.print-root .cols {
+  display: grid;
+  grid-template-columns: 112mm 56mm;
+  column-gap: 8mm;
+  margin-top: 4.5mm;
+}
+.col-rail .block {
+  break-inside: avoid;
+  margin-bottom: 7.5pt;
+}
+/* Rail runs slightly tighter leading than the main column (1.5 stays there) —
+   the narrow measure needs it to hold all five blocks on page 1. v1.2: the
+   panel padding narrows the measure further, so leading tightens a touch
+   more (1.41 / 1.39); body size stays 10.5pt. */
+.col-rail .rail-text,
+.col-rail .skill {
+  line-height: 1.33;
+}
+.col-rail .edu-line,
+.col-rail .edu-hl {
+  line-height: 1.31;
+}
+.col-rail .block:last-child {
+  margin-bottom: 0;
+}
+/* v1.2: page-1 rail sits on the panel tint as one continuous side panel.
+   align-self:start keeps the tint hugging the rail content; the padding is
+   compensated by slightly tighter rail block margins below. */
+.print-root .col-rail.rail-panel {
+  background: var(--panel);
+  padding: 5pt 8pt 7pt;
+  align-self: start;
+}
+.print-root .rail-panel .block {
+  margin-bottom: 4pt;
+}
+.print-root .rail-panel .sec-title {
+  margin-bottom: 4pt;
+}
+.print-root .rail-panel .skill {
+  margin-bottom: 2.5pt;
+}
+.print-root .rail-panel .block:last-child {
+  margin-bottom: 0;
+}
+
+/* v1.2: page 2 carries Urban Haven + NSU + Research + Publications at full
+   width; spacing opened up so the page lands near the ~65% fill target. */
+.full-main .block {
+  margin-bottom: 20pt;
+}
+.full-main .block:last-child {
+  margin-bottom: 0;
+}
+.full-main .entry {
+  margin-bottom: 13pt;
+}
+.full-main .entry:last-child {
+  margin-bottom: 0;
+}
+.full-main .bullets li {
+  line-height: 1.53;
+  margin-bottom: 4pt;
+}
+.full-main .bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.p-footer {
+  position: absolute;
+  bottom: 1mm;
+  left: 0;
+  right: 0;
+  font-size: 8pt;
+  color: var(--slate);
+}
+
+/* ---------- screen render ---------- */
+.screen-root {
+  background: var(--paper);
+  min-height: 100vh;
+}
+.hero {
+  background: var(--hero);
+  padding: 72px 24px 56px;
+}
+.hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 48px;
+}
+.hero .eyebrow {
+  font-size: 11px;
+  margin-bottom: 14px;
+}
+.s-name {
+  font-family: 'Space Grotesk Variable', sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  color: var(--paper);
+}
+.hero .seg-ember {
+  margin-top: 20px;
+}
+.hero-side {
+  padding-top: 34px;
+}
+.contact-dark {
+  font-size: 14px;
+  color: var(--hero-slate);
+  line-height: 1.85;
+}
+.screen-body {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 52px 24px 64px;
+}
+.screen-cols {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 52px;
+}
+.screen-footer {
+  background: var(--hero);
+  padding: 22px 24px;
+}
+.screen-footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-size: 12.5px;
+  color: var(--hero-slate);
+}
+
+/* ---------- PDF download bar (screen renders only) ---------- */
+.dl-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.dl-btn {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ink);
+  background: #fff;
+  text-decoration: none;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 10px 16px;
+}
+.dl-btn:hover {
+  border-color: var(--ember);
+  color: var(--ember);
+}
+.dl-btn-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.dl-btn-primary:hover {
+  background: var(--ember);
+  border-color: var(--ember);
+  color: #fff;
+}
+/* Scholar variant of the download bar */
+.dl-bar.scholar .dl-btn {
+  color: var(--s-ink);
+  border-color: #ddd8c8;
+}
+.dl-bar.scholar .dl-btn:hover {
+  border-color: var(--s-blue);
+  color: var(--s-blue);
+}
+.dl-bar.scholar .dl-btn-primary {
+  background: var(--s-blue);
+  border-color: var(--s-blue);
+  color: var(--s-paper);
+}
+.dl-bar.scholar .dl-btn-primary:hover {
+  background: var(--s-ink);
+  border-color: var(--s-ink);
+  color: var(--s-paper);
+}
+
+@media (max-width: 720px) {
+  .hero-inner,
+  .screen-cols {
+    grid-template-columns: 1fr;
+  }
+  .hero-side {
+    padding-top: 24px;
+  }
+  .s-name {
+    font-size: 42px;
+  }
+  .screen-cols .col-rail {
+    margin-top: 36px;
+  }
+}
+
+/* ============================================================
+   Scholar — Academic CV (DESIGN.md Variant B)
+   ink #17263F · archive blue #1E3A5F · gold #B98A2F (name segment only)
+   slate #5C6672 · paper #FBFAF6 · Fraunces 600 + Inter
+   ============================================================ */
+:root {
+  --s-ink: #17263f;
+  --s-blue: #1e3a5f;
+  --s-gold: #b98a2f;
+  --s-slate: #5c6672;
+  --s-paper: #fbfaf6;
+}
+
+.scholar-root {
+  color: var(--s-ink);
+}
+.sheet.scholar-sheet {
+  background: var(--s-paper);
+}
+
+.a-header {
+  display: grid;
+  grid-template-columns: 112mm 56mm;
+  column-gap: 8mm;
+  margin-bottom: 13pt;
+}
+.a-name {
+  font-family: 'Fraunces Variable', serif;
+  font-weight: 600;
+  font-size: 32pt;
+  line-height: 1.08;
+  color: var(--s-ink);
+}
+.seg-gold {
+  width: 40px;
+  height: 3px;
+  background: var(--s-gold);
+  margin-top: 7pt;
+}
+.a-header-side {
+  padding-top: 6pt;
+}
+.a-contact {
+  font-size: 9pt;
+  color: var(--s-slate);
+  line-height: 1.75;
+}
+
+.a-sec-title {
+  font-family: 'Fraunces Variable', serif;
+  font-weight: 600;
+  font-size: 13pt;
+  color: var(--s-blue);
+  margin-bottom: 6pt;
+  break-after: avoid;
+}
+.a-block {
+  margin-bottom: 14pt;
+}
+.a-block:last-child {
+  margin-bottom: 0;
+}
+.a-text {
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+
+.a-entry {
+  margin-bottom: 10pt;
+  break-inside: avoid;
+}
+.a-entry:last-child {
+  margin-bottom: 0;
+}
+.a-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10pt;
+}
+.a-entry h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--s-ink);
+}
+.a-dates {
+  font-size: 9.5pt;
+  color: var(--s-slate);
+  white-space: nowrap;
+}
+.a-sub {
+  font-size: 10pt;
+  color: var(--s-slate);
+  margin: 1pt 0 3pt;
+}
+.a-hl {
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+.a-bullets {
+  list-style: none;
+}
+.a-bullets li {
+  font-size: 10.5pt;
+  line-height: 1.55;
+  padding-left: 11pt;
+  position: relative;
+  margin-bottom: 2pt;
+}
+.a-bullets li:last-child {
+  margin-bottom: 0;
+}
+.a-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 1pt;
+  top: 0.55em;
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background: var(--s-blue);
+}
+
+/* journal-style references: hanging indent, italic journal, DOI as link */
+.a-ref {
+  font-size: 10.5pt;
+  line-height: 1.55;
+  padding-left: 16pt;
+  text-indent: -16pt;
+  margin-bottom: 8pt;
+}
+.a-ref:last-child {
+  margin-bottom: 0;
+}
+.a-ref a {
+  color: var(--s-blue);
+  text-decoration: none;
+}
+
+.a-skill {
+  font-size: 10.5pt;
+  line-height: 1.55;
+  margin-bottom: 3pt;
+}
+.a-skill:last-child {
+  margin-bottom: 0;
+}
+.a-skill strong {
+  font-weight: 600;
+}
+.a-award {
+  font-size: 10.5pt;
+  line-height: 1.55;
+  margin-bottom: 3pt;
+}
+.a-award:last-child {
+  margin-bottom: 0;
+}
+.a-award strong {
+  font-weight: 600;
+}
+.a-footer {
+  color: var(--s-slate);
+}
+
+/* ---------- Scholar screen render ---------- */
+.a-screen {
+  background: var(--s-paper);
+  min-height: 100vh;
+  color: var(--s-ink);
+}
+.a-screen-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 64px 24px 56px;
+}
+.a-screen .a-header {
+  grid-template-columns: 2fr 1fr;
+  column-gap: 48px;
+  margin-bottom: 40px;
+}
+.a-screen .a-name {
+  font-size: 46px;
+}
+.a-screen .a-header-side {
+  padding-top: 10px;
+}
+.a-screen .a-contact {
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+.a-screen .a-block {
+  margin-bottom: 32px;
+}
+.a-screen .a-sec-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.a-screen-footer {
+  background: var(--s-ink);
+  padding: 22px 24px;
+}
+.a-screen-footer-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  font-size: 12.5px;
+  color: #c8d2e0;
+}
+
+@media (max-width: 720px) {
+  .a-screen .a-header {
+    grid-template-columns: 1fr;
+  }
+  .a-screen .a-name {
+    font-size: 36px;
+  }
+}
