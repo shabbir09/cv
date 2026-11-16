@@ -1,0 +1,11 @@
+# Generated artifacts — everything below is rebuilt by
+# .github/workflows/build.yml from content.yaml on every push.
+# Keeping these out of git is what makes this repo text-only:
+# no font, image or PDF binaries are ever committed.
+node_modules/
+web/dist/
+dist/
+build/
+publish/
+staging-premium/
+premium/
