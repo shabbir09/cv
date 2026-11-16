@@ -1,5 +1,11 @@
 name: Build CVs
 
+# Every edit to content.yaml rebuilds all three renders and republishes
+# https://shabbir09.github.io/cv/ :
+#   1. ATS twin      — build.py (RenderCV) -> dist/ PDFs + LinkedIn QR
+#   2. Premium PDFs  — web/ React app, printed with Playwright/Chromium
+#   3. Web CV        — the same React app, published as the share page
+# The publish/ folder assembled at the end is what GitHub Pages serves.
 on:
   push:
     branches: [main]
@@ -15,15 +21,53 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # --- Render 1: ATS twin (RenderCV) + QR -------------------------
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install builder
         run: pip install "rendercv[full]" segno pyyaml
-      - name: Build both CVs
+      - name: Build ATS CVs + QR (RenderCV)
         run: python3 build.py
-      - name: Publish share page + PDFs to GitHub Pages
+
+      # --- Renders 2+3: React web CV + premium PDFs -------------------
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Generate web content from content.yaml
+        run: python3 web/scripts/yaml_to_json.py
+      - name: Install web dependencies
+        working-directory: web
+        run: npm ci
+      - name: Build web CV
+        working-directory: web
+        run: npm run build
+      - name: Install Chromium for Playwright
+        working-directory: web
+        run: npx playwright install --with-deps chromium
+      - name: Print premium PDFs (staged for assembly)
+        working-directory: web
+        env:
+          CV_PREMIUM_DIR: ${{ github.workspace }}/staging-premium
+        run: |
+          node scripts/print.mjs founder
+          node scripts/print.mjs academic
+
+      # --- Assemble the published site --------------------------------
+      # index.html + assets come from the React build; the four PDFs and
+      # the QR land next to it under the exact names the app links to.
+      - name: Assemble publish/
+        run: |
+          mkdir publish
+          cp -r web/dist/. publish/
+          cp dist/Shabbir_Ahmed_Founder_CV.pdf dist/Shabbir_Ahmed_Academic_CV.pdf dist/qr_linkedin.png publish/
+          cp staging-premium/Shabbir_Ahmed_Founder_CV_premium.pdf staging-premium/Shabbir_Ahmed_Academic_CV_premium.pdf publish/
+          ls -la publish/
+      - name: Publish to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: publish
       - uses: actions/deploy-pages@v4
