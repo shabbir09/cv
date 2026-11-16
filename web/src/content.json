@@ -1,0 +1,254 @@
+{
+  "personal": {
+    "name": "Shabbir Ahmed",
+    "location": "Bashundhara, Dhaka, Bangladesh",
+    "email": "shabbir.ahmad1994@gmail.com",
+    "phone": "+8801531216024",
+    "linkedin": "shabbir-ahmed09",
+    "github": "shabbir09",
+    "headline_academic": "Computer Science graduate and researcher — machine learning, remote sensing and Generative AI; former Lab Instructor at North South University.",
+    "headline_founder": "Founder of Orion AI. I build AI systems — receptionists, follow-up engines and content pipelines — that help local-service businesses stop losing customers."
+  },
+  "education": [
+    {
+      "institution": "North South University",
+      "area": "Computer Science and Engineering",
+      "degree": "BS",
+      "start": 2016,
+      "end": "2020-12",
+      "location": "Dhaka, Bangladesh",
+      "highlights": [
+        "Cum Laude — CGPA 3.57/4.0",
+        "Specialised in the Artificial Intelligence track",
+        "Scholarship recipient for 3 years"
+      ],
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    },
+    {
+      "institution": "Shahid Syed Nazrul Islam College",
+      "area": "Higher Secondary Certificate (HSC)",
+      "start": 2012,
+      "end": 2014,
+      "location": "Mymensingh, Bangladesh",
+      "highlights": [
+        "GPA 5.0/5.0"
+      ],
+      "show_on": [
+        "academic"
+      ]
+    },
+    {
+      "institution": "Mrityunjoy School",
+      "area": "Secondary School Certificate (SSC)",
+      "start": 2010,
+      "end": 2012,
+      "location": "Mymensingh, Bangladesh",
+      "highlights": [
+        "GPA 5.0/5.0"
+      ],
+      "show_on": [
+        "academic"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Orion AI",
+      "position": "Founder",
+      "start": 2026,
+      "end": "present",
+      "location": "Dhaka, Bangladesh",
+      "highlights": [
+        "Founded an AI systems agency building GoHighLevel-based client-acquisition and follow-up automation for clinics and high-ticket home-service businesses",
+        "Designed a five-offer product suite — missed-call rescue / speed-to-lead, database reactivation, AI front desk, AI voice receptionist, and a review & reputation engine — priced as setup builds plus monthly retainers",
+        "Built a reusable HVAC template system (pipelines, workflows, Conversation AI and Voice AI agents) so new client deployments start from a proven base instead of a blank account",
+        "Run the company AI-first: a team of specialised AI agents handles research, build, content and operations under my direction"
+      ],
+      "show_on": [
+        "founder"
+      ]
+    },
+    {
+      "company": "Real Fibre Glass Industries (RFGI)",
+      "position": "AI & IT Consultant",
+      "start": 2026,
+      "end": "present",
+      "location": "Dhaka, Bangladesh",
+      "highlights": [
+        "Consultant to an FRP manufacturer established in 1994: supervise the company website and Facebook page and lead the digitisation of its inventory system",
+        "Audited the 89-product e-commerce catalogue and checkout flow end to end; identified the launch blockers and the data-correctness fixes, in priority order",
+        "Planning a focused web-only product line from the company's most profitable products, run as a separate brand"
+      ],
+      "show_on": [
+        "founder"
+      ]
+    },
+    {
+      "company": "Urban Haven",
+      "position": "Founder & Operator",
+      "start": 2026,
+      "end": "present",
+      "location": "Bashundhara, Dhaka, Bangladesh",
+      "highlights": [
+        "Run a short-stay property-management operation (Airbnb plus direct bookings) in Bashundhara, Dhaka, including a co-host model for other property owners",
+        "Built a live bookings-and-revenue dashboard with automatic calendar sync, and a Facebook Page + WhatsApp Business front-desk system (catalogue, quick replies, booking pipeline)"
+      ],
+      "show_on": [
+        "founder"
+      ]
+    },
+    {
+      "company": "North South University",
+      "position": "Lab Instructor, Department of Electrical and Computer Engineering",
+      "start": "2021-06",
+      "end": "2025-04",
+      "location": "Dhaka, Bangladesh",
+      "highlights": [
+        "Conducted lab sessions and taught C programming and problem solving, data structures, and database management systems (DBMS)",
+        "Grading, exam proctoring, and student mentoring across multiple semesters"
+      ],
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    },
+    {
+      "company": "North South University",
+      "position": "Undergraduate Teaching Assistant, Department of Mathematics and Physics",
+      "start": "2020-10",
+      "end": "2021-05",
+      "location": "Dhaka, Bangladesh",
+      "highlights": [
+        "Conducted tutorial sessions; graded quizzes, homework and assignments"
+      ],
+      "show_on": [
+        "academic"
+      ]
+    }
+  ],
+  "research": [
+    {
+      "company": "North South University",
+      "position": "Researcher — with Dr Shahnewaz Siddique",
+      "start": "2021-01",
+      "end": 2025,
+      "location": "Dhaka, Bangladesh",
+      "highlights": [
+        "Flood mapping using remote sensing and machine learning: building flood maps from satellite imagery, estimating damage by image analysis, and applying machine-learning models",
+        "Additional research work on Generative AI and its societal impact"
+      ],
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Application of Fuzzy Logic on CT-Scan Images of Covid-19 Patients",
+      "authors": [
+        "F. Noor",
+        "R. M. Tanjim",
+        "M. J. Rahim",
+        "M. N. I. Suvon",
+        "F. K. Porna",
+        "Shabbir Ahmed",
+        "M. A. A. Kaiyoum",
+        "R. M. Rahman"
+      ],
+      "date": 2021,
+      "journal": "International Journal of Intelligent Information and Database Systems",
+      "doi": "10.1504/IJIIDS.2021.10039512",
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    },
+    {
+      "title": "A Noble Approach to Develop Smart Travel Bag: Design, Control & Performance Analysis of Electronic Travel Bag",
+      "authors": [
+        "Z. B. Jahir",
+        "F. H. Chowdhury",
+        "N. N. Hassan",
+        "Shabbir Ahmed",
+        "N. Jahan",
+        "S. Jahan",
+        "A. A. Mahadi"
+      ],
+      "date": 2018,
+      "journal": "2018 International Conference on Recent Innovations in Electrical, Electronics & Communication Engineering (ICRIEECE), pp. 953–956",
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "label": "Programming",
+      "details": "Python, C, C++, JavaScript, PHP, MySQL",
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    },
+    {
+      "label": "AI & Automation",
+      "details": "GoHighLevel, n8n, LLM agent systems (Claude, ChatGPT, Gemini), Conversation AI & Voice AI design, workflow automation",
+      "show_on": [
+        "founder"
+      ]
+    },
+    {
+      "label": "Research",
+      "details": "Generative AI, remote sensing, satellite image analysis, machine learning, research methodology",
+      "show_on": [
+        "academic"
+      ]
+    },
+    {
+      "label": "Software",
+      "details": "QGIS, ArcGIS, LaTeX, Git/GitHub, Microsoft Office",
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    },
+    {
+      "label": "Languages",
+      "details": "Bengali (native), English (fluent)",
+      "show_on": [
+        "academic",
+        "founder"
+      ]
+    }
+  ],
+  "coursework": [
+    {
+      "label": "Relevant Coursework",
+      "details": "Data Structures and Algorithms, Theory of Computation, DBMS, Machine Learning, Fuzzy Logic, Internet and Web Technology",
+      "show_on": [
+        "academic"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "label": "2017",
+      "details": "North South University — scholarship recipient for 3 years",
+      "show_on": [
+        "academic"
+      ]
+    },
+    {
+      "label": "2005",
+      "details": "Bangladesh Government — Primary Scholarship, Talent Pool",
+      "show_on": [
+        "academic"
+      ]
+    }
+  ]
+}
