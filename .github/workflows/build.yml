@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install builder
-        run: pip install rendercv segno pyyaml
+        run: pip install "rendercv[full]" segno pyyaml
       - name: Build both CVs
         run: python3 build.py
       - name: Publish share page + PDFs to GitHub Pages
