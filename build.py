@@ -5,10 +5,12 @@ Reads content.yaml (the single source of truth) and renders:
   dist/Shabbir_Ahmed_Academic_CV.pdf  (+ .html, .md)
   dist/Shabbir_Ahmed_Founder_CV.pdf   (+ .html, .md)
   dist/qr_linkedin.png                (QR to the LinkedIn profile)
-  dist/index.html                     (share page linking both PDFs)
+  dist/index.html                     (simple local share page — the PUBLISHED
+                                       share page is the React app in web/,
+                                       assembled by .github/workflows/build.yml)
 
 Usage:  python3 build.py
-Requires: rendercv, pyyaml, segno  (pip install rendercv segno pyyaml)
+Requires: rendercv, pyyaml, segno  (pip install "rendercv[full]" segno pyyaml)
 """
 import subprocess
 import sys
@@ -164,7 +166,7 @@ def main():
         qr.save(str(DIST / "qr_linkedin.png"), scale=8, border=2)
         print("QR saved: dist/qr_linkedin.png ->", LINKEDIN_URL)
     except ImportError:
-        print("segno not installed; skipping QR (pip install segno)")
+        print('segno not installed; skipping QR (pip install "rendercv[full]" segno pyyaml)')
 
     # Share page for GitHub Pages
     names = {p.name: p for p in pdfs}
